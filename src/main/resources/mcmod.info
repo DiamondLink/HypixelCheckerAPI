@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "hypixelchecker",
+  "name": "Hypixel Checker API",
+  "description": "An API which provide several useful informations about the game, such as which game is currently being playing by the player. Also comes with other features related to server, such as auto reconnect, disconnect, etc...",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["DiamondLink"],
+  "credits": "DiamondLink",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []

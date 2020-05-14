@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/HypixelCheckerAPI"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="4"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="GradleStartServer"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="HypixelCheckerAPI"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value=" -DFORGE_FORCE_FRAME_RECALC=true"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="/Users/baptiste/Downloads/forge-1.12.2-14.23.5.2768-mdk 2/run"/>
+</launchConfiguration>
