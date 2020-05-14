@@ -1,5 +1,5 @@
 # HypixelCheckerAPI
-API to use in youre minecraft forge mod, which provide info and features about the games...
+API to use in youre minecraft 1.12.2 forge mod, which provide info and features about the games...
 See the features below
 
 ## Intallation
