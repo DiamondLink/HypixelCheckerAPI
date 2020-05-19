@@ -7,14 +7,17 @@ import com.checker.diamondlink.utils.MCUtils;
 import com.checker.diamondlink.vars.*;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.StringUtils;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
+import net.minecraftforge.event.entity.EntityJoinWorldEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientConnectedToServerEvent;
 import net.minecraftforge.fml.common.network.FMLNetworkEvent.ClientDisconnectionFromServerEvent;
 
 public class ChkEvents {
+
 	@SubscribeEvent
 	public void onChatReceived(ClientChatReceivedEvent event) {
 		if (Values.isOnHypixel) {
@@ -36,7 +39,29 @@ public class ChkEvents {
     		} else {
     			return;
     		}
+    		Values.gotHypixelMap = true;
     		event.setCanceled(true);
+		}
+	}
+	
+	public static boolean didThePlayerJoinedRemoteServer(EntityJoinWorldEvent event) {
+		if (event.getEntity() != null && event.getEntity() instanceof EntityPlayer && event.getEntity().world.isRemote) {
+        	if (event.getEntity().getName().equals(MCUtils.getPlayer().getName())) {
+        		return true;
+        	}
+		}
+		return false;
+	}
+	
+	public static boolean allowJoinWorldListener = true;
+	
+	@SubscribeEvent
+	public void onWorldJoin(EntityJoinWorldEvent event) {
+		if (didThePlayerJoinedRemoteServer(event) && allowJoinWorldListener) {
+			allowJoinWorldListener = false;
+			MapTriggerer mapTriggerer = new MapTriggerer();
+			mapTriggerer.start();
+			
 		}
 	}
 	

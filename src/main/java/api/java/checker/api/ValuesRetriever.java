@@ -15,5 +15,8 @@ public class ValuesRetriever {
 	public boolean isInAWorld() {
 		return Values.inAWorld;
 	}
+	public boolean gotHypixelMap() {
+		return Values.gotHypixelMap;
+	}
 
 }

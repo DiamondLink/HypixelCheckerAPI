@@ -8,9 +8,6 @@ import com.checker.diamondlink.module.TriggersCheckings;
 import net.minecraft.client.multiplayer.ServerData;
 
 public class Manager {
-	public void upateMapValue() {
-		TriggersCheckings.triggerHypixelMapUpdate();
-	}
 	
 	public void autoReconnect(String serverIpToReconnectTo) {
 		TriggerConnects.autoConnect(serverIpToReconnectTo);
@@ -22,6 +19,10 @@ public class Manager {
 	
 	public void connectToAServer(Optional<ServerData> serverConnexion) {
 		TriggerConnects.connectToServerFromMenu(serverConnexion);
+	}
+	@Deprecated
+	public void upateMapValue() {	//now automatically done so this method is useless now
+		TriggersCheckings.triggerHypixelMapUpdate();
 	}
 
 }
