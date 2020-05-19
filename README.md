@@ -24,10 +24,6 @@ Is the player in singleplayer ?
 ```java
 CheckerAPI.getValues().isOnSinglePlayer();
 ```
-Update the hypixel game value
-```java
-CheckerAPI.getManager().updateMapValue()
-```
 So you can get which game the player is playing (on hypixel)
 ```java
 CheckerAPI.getValues().getHypixelGame();
